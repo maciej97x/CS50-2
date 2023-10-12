@@ -10,7 +10,6 @@ int main(void)
     {
     return 0;
     }
-
     else if ((n % 2) == 0)
     {
     return 1 + tr(n/2);
