@@ -5,7 +5,7 @@ int main(void)
 
 {
 int hours[] = {1, 3, 4};
-for (int = 0; int < 3; i++)
+for (int i = 0; i < 3; i++)
 
 {
     printf("%i\n", hours [i]);
