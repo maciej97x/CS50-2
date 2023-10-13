@@ -10,6 +10,6 @@ string number = get_string("What is your number? ");
 
 printf("Age is %i. Name is %s. Phone number is %s. ", age, name, number);
 
-printf("/n ");
+printf("\n ");
 
 }
