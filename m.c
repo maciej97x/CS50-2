@@ -6,7 +6,7 @@ int main(void)
 
 {
    string t = get_string("t ");
-   int j = get_int("j: ");
+   string j = get_string("j: ");
 
 
    if (i == j)
