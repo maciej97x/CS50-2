@@ -4,9 +4,7 @@
 int main(void)
 
 {
-    char *s = "HI";
-    printf("%c\n", *s);
-    printf("%c\n", *(s+1));
-    printf("%c\n", *(s+2));
+   int i = get_int("i: ");
+   int j = get_int("j: ");
 
 }
