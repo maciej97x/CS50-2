@@ -5,8 +5,8 @@ int main(void)
 
 {
 
-    char *s = "HI"
-    int *p = &n;
-    printf("%p\n", p);
+    char *s = "HI";
+    printf("%p\n", s);
+    printf("%p\n", &s[0]);
 
 }
