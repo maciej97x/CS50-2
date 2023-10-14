@@ -9,7 +9,7 @@ int main(void)
    string j = get_string("j: ");
 
 
-   if (i == j)
+   if (strcmp(t, j) == 0)
 
    {
     printf("Same \n");
