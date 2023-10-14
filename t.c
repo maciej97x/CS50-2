@@ -5,18 +5,13 @@
 int main(void)
 
 {
-    FILE *file = fopen("Data ")
+    FILE *file = fopen("Data ", "a");
 
+    string name = get_string("Name: ");
+    string number = get_string("Number: ");
 
-
-   char *s = get_string("s: ");
-
-   char *t = malloc(strlen(s) + 1);
-
-   for (int i = 0; i < strlen(s) + 1; i++)
-
-   printf("s: %s\n", s);
-   printf("t: %s\n", t);
+    fprintf(file, "%s, %s\n", name, number);
+    fclose(file);
 
 
 
