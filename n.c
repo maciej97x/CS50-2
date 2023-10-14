@@ -8,8 +8,8 @@ int main(void)
    string t = get_string("t ");
    string j = get_string("j ");
 
-   printf("%t\n", t);
-   printf("%j\n", j);
+   printf("%s\n", t);
+   printf("%s\n", j);
 
 }
 
