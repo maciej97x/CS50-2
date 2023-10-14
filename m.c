@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <cs50.h>
+#include <string.h>
 
 int main(void)
 
 {
-   int i = get_int("i: ");
+   string t = get_string("t ");
    int j = get_int("j: ");
 
 
