@@ -4,7 +4,7 @@
 int main(void)
 
 {
-    char *s = "HI";
+    string s = get_string("a ");
     printf("%p\n", s);
     printf("%p\n", &s[0]);
 }
