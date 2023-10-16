@@ -10,9 +10,9 @@ int main(void)
 
    char *t = s;
 
-   t [0] = toupper(t[0]);
+   s [0] = toupper(s[0]);
 
-   printf("s: %s\n", s);
+   printf("s: %s\n", t);
 
 
 }
