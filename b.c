@@ -17,7 +17,7 @@ void draw(int n)
     {
     return;
     }
-   draw(n - 1);
+   draw(n - 2);
 
    for (int i = 0; i < n; i++)
    {
