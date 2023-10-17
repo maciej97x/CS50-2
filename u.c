@@ -40,6 +40,6 @@ void visualize(node *list)
         printf("Next: %p\n\n", list->next);
         list = list->next;
     }
-    printf("+-----------------+\n\");
+    printf("+-----------------+\n\n");
 
 }
