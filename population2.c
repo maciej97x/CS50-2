@@ -20,7 +20,7 @@ int main(void)
     int years = 0;
     do
     {
-        (start = start + start/3 - start/4);
+        start = start + start/3 - start/4;
         years++;
     }
     while (start < end);
