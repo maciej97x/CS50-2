@@ -1,31 +1,26 @@
-#include <stdio.h>
-#include <cs50.h>
 
-int main(void)
-{
-    int height = 0;
-
-    //Asks the user to provide a number between 1 nad 8 inclusive
-    do
+    printf("Size of your pyramid: ");
+    int size = get_int();
+    while (size < 0 || size >= 24)
     {
-        height = get_int("Height: ");
+        printf("Please choose a size between 0 and 23: ");
+        size = get_int();
     }
-    while (height > 8 || height < 1);
 
-    for (int i = 0; i < height; i ++)
+    for (int i = 1; i < size + 1; i++)
     {
-        for (int k = 1; k < height - i; k++)
+        for (int j = 0; j < size + 1; j++)
         {
-            printf("*");
-
-            //k adds the left hand spaces in the pyramid
+            if (j < size - i)
+            {
+                printf(" ");
+            }
+            else
+            {
+                printf("#");
+            }
         }
-        for (int j = 0; j < i + 1; j++)
-        {
-            printf("#");
-            //i and j loops pint our the right hand pyramid
-        }
-
         printf("\n");
     }
+
 }
