@@ -12,11 +12,11 @@ int main(void)
 
     for (int i = 0; i < height; i++)
     {
-        for (int spaces = height - 1; spaces > rows; spaces--)
+        for (int spaces = height - 1; spaces > i; spaces--)
         {
             printf(" ");
         }
-        for (int hashes = 0; hashes <= hashes++)
+        for (int hashes = 0; hashes <= i; hashes++)
         {
             printf("#");
         }
