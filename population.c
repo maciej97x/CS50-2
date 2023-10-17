@@ -3,10 +3,13 @@
 
 int main(void)
 {
-    int start = get_int("Start size: ");
+  int start:
+  do
+  {
+    start = get_int("Start size ");
+  }
+  while (start < 9);
 
-    int end = get_int("End size: ");
 
 
-  
 }
