@@ -10,8 +10,8 @@ int main(void)
     }
     while (height < 1);
 
-    for (i = 0; i < height; i++)
+    for (int = 0; int < height; i++)
     {
-    printf("# \n");
+    printf("#");
     }
 }
