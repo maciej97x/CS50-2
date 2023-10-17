@@ -25,5 +25,5 @@ int main(void)
     }
     while (start < end);
 
-    printf("Years: %i/n", years);
+    printf("Years: %i /n", years);
 }
