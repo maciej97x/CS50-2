@@ -6,14 +6,14 @@ int main(void)
     int start;
     do
     {
-        get_int("Start size: ");
+        start = get_int("Start size: ");
     }
     while (start < 1);
 
     int end;
     do
     {
-        get_int("End size: ");
+        end = get_int("End size: ");
     }
     while (end < start);
 
