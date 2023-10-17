@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int height = 0;
+    int height;
     do
     {
         height = get_int("Numbes of rows: ");
