@@ -3,13 +3,12 @@
 
 int main(void)
 {
-    int height;
+    int height = 0;
     do
     {
         height = get_int("Number ");
     }
     while (height < 1);
-
 
     for (int = 0; int < height; i++)
     {
