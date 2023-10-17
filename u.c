@@ -1,26 +1,21 @@
+while True:
+    try:
+        height = int(input("Height: "))
+        if (height >= 1) and (height <= 8):
+            break
+    except:
+        print("", end="")
 
-    printf("Size of your pyramid: ");
-    int size = get_int();
-    while (size < 0 || size >= 24)
-    {
-        printf("Please choose a size between 0 and 23: ");
-        size = get_int();
-    }
+spaces = 1
+# prints newline
+for j in range(height):
 
-    for (int i = 1; i < size + 1; i++)
-    {
-        for (int j = 0; j < size + 1; j++)
-        {
-            if (j < size - i)
-            {
-                printf(" ");
-            }
-            else
-            {
-                printf("#");
-            }
-        }
-        printf("\n");
-    }
+    # prints spaces
+    for spaces in range(height-j-1):
+        print(" ", end="")
 
-}
+    # prints hashes
+    for i in range(j+1):
+        print("#", end="")
+
+    print()
