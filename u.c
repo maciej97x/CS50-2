@@ -22,6 +22,9 @@ int main (void)
 
     for (int i = 0; i < LIST_SIZE; i++)
     {
-        string phrase = get_string ()
+        string phrase = get_string ("Enter a new phrase: ");
+
+        visualize(list);
     }
+    
 }
