@@ -9,4 +9,7 @@ int main(void)
         height = get_int("Number ");
     }
     while (height < 1);
+
+    for (int = 0; i < height; i++)
+    printf("# \n");
 }
