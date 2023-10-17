@@ -10,6 +10,7 @@ int main(void)
     }
     while (height < 1);
 
+
     for (int = 0; int < height; i++)
     {
     printf("#");
