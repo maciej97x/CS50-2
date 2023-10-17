@@ -4,19 +4,20 @@
 int main(void)
 {
   int start;
+  do
   {
     start = get_int("Start size: ");
   }
+  while (start < 1);
 
   int end;
-
+  do
   {
     end = get_int("End size: ");
   }
+  while (end < start);
 
   int years = 0;
-
-  if (start != end)
   do
   {
     start = start + start / 3 - start /4;
@@ -24,8 +25,4 @@ int main(void)
   }
   while (start < end);
   printf("Years: %i\n", years);
-
-
-
-
 }
