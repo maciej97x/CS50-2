@@ -29,7 +29,7 @@ int main(void)
         printf(" ");
          for (int space2 = height - 1; space2 > i; space2--)
         {
-            printf(" ");
+            printf("a");
         }
         for (int hash3 = 0; hash3 <= i; hash3++)
         {
