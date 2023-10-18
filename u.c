@@ -1,29 +1,66 @@
-#include <stdio.h>
 #include <cs50.h>
+#include <stdio.h>
+
+int get_cents(void);
+int calculate_quarters(int cents);
+int calculate_dimes(int cents);
+int calculate_nickels(int cents);
+int calculate_pennies(int cents);
 
 int main(void)
 {
-    // Declare int here globaly to be used in loops further down:
-    int height;
-    // Do while loop to get int between 1 and including 8:
-    do
-    {
-        height = get_int("Height: ");
-    }
-    while (height < 1 || height > 8);
-    // Parent for loop for number of rows that will equal the height input:
-    for (int rows = 0; rows < height; rows++)
-    {
-        // Child for loop, to print spaces:
-        for (int spaces = height - 1; spaces > rows; spaces--)
-        {
-            printf(" ");
-        }
-        // Child for loop, to print hashes:
-        for (int hashes = 0; hashes <= rows; hashes++)
-        {
-            printf("#");
-        }
-        printf("\n");
-    }
+    // Ask how many cents the customer is owed
+    int cents = get_cents();
+
+    // Calculate the number of quarters to give the customer
+    int quarters = calculate_quarters(cents);
+    cents = cents - quarters * 25;
+
+    // Calculate the number of dimes to give the customer
+    int dimes = calculate_dimes(cents);
+    cents = cents - dimes * 10;
+
+    // Calculate the number of nickels to give the customer
+    int nickels = calculate_nickels(cents);
+    cents = cents - nickels * 5;
+
+    // Calculate the number of pennies to give the customer
+    int pennies = calculate_pennies(cents);
+    cents = cents - pennies * 1;
+
+    // Sum coins
+    int coins = quarters + dimes + nickels + pennies;
+
+    // Print total number of coins to give the customer
+    printf("%i\n", coins);
+}
+
+int get_cents(void)
+{
+    // TODO
+    return 0;
+}
+
+int calculate_quarters(int cents)
+{
+    // TODO
+    return 0;
+}
+
+int calculate_dimes(int cents)
+{
+    // TODO
+    return 0;
+}
+
+int calculate_nickels(int cents)
+{
+    // TODO
+    return 0;
+}
+
+int calculate_pennies(int cents)
+{
+    // TODO
+    return 0;
 }
