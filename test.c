@@ -22,7 +22,7 @@ int main(void)
         }
         printf(" ");
 
-        for (int hash2 = 0; hash2 <= i; hash2++)
+        for (int hash2 = 0; hash2 < i; hash2++)
         {
             printf("#");
         }
