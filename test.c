@@ -3,26 +3,29 @@
 
 int main(void)
 {
-    int start;
+    int height;
     do
     {
-        start = get_int("Start ");
+        height = get_int("Height ");
     }
-    while (start < 1);
+    while (height < 1 || height > 8);
 
-    int end;
-    do
+    for (int i = 0; i < height; i++)
     {
-        end = get_int("End ");
+        for (int space = height - 1; space > i; space--)
+        {
+            printf("a");
+        }
+        for (int hash = 0; hash <= i; hash++)
+        {
+            printf("#");
+        }
+        printf(" ");
+        for (int hash2 = 0; hash2 <= i; hash2++)
+        {
+            printf("#");
+        }
+        printf("\n");
     }
-    while (end > 8);
 
-    int years = 0;
-    do
-    {
-        start = start + start / 3 - start / 4;
-        years++;
-    }
-    while (start < end);
-    printf("Years %i", years);
 }
