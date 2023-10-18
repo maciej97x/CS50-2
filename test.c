@@ -22,6 +22,11 @@ int main(void)
         }
         printf(" ");
 
+          for (int space3 = height - 1; space3 > i; space3--)
+        {
+            printf(" ");
+        }
+
            for (int hash3 = 0; hash3 <= i; hash3++)
         {
             printf("#");
