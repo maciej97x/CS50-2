@@ -16,7 +16,7 @@ int main(void)
         {
             printf("a");
         }
-        for (int hash = 0; hash <= i; hash++)
+        for (int hash = 1; hash <= i; hash++)
         {
             printf("#");
         }
