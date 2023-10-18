@@ -1,48 +1,75 @@
-#include <stdio.h>
 #include <cs50.h>
+#include <stdio.h>
+
+int get_cents(void);
+int calculate_quarters(int cents);
+int calculate_dimes(int cents);
+int calculate_nickels(int cents);
+int calculate_pennies(int cents);
 
 int main(void)
 {
-    int height;
-    do
-    {
-        height = get_int("Height ");
-    }
-    while (height < 1 || height > 8);
+    // Ask how many cents the customer is owed
+    int cents = get_cents();
 
-    for (int i = 0; i < height; i++)
-    {
-        for (int space = height - 1; space > i; space--)
-        {
-            printf(" ");
-        }
-        for (int hash = 0; hash <= i; hash++)
-        {
-            printf("#");
-        }
-        printf(" ");
+    // Calculate the number of quarters to give the customer
+    int quarters = calculate_quarters(cents);
+    cents = cents - quarters * 25;
 
-        for (int hash2 = 0; hash2 <= i; hash2++)
-        {
-            printf("#");
-        }
-        printf("   ");
-         for (int space2 = height - 1; space2 > i; space2--)
-        {
-            printf("a");
-        }
-        for (int hash3 = 0; hash3 <= i; hash3++)
-        {
-            printf("#");
-        }
-        printf(" ");
+    // Calculate the number of dimes to give the customer
+    int dimes = calculate_dimes(cents);
+    cents = cents - dimes * 10;
 
-        for (int hash4 = 0; hash4 <= i; hash4++)
-        {
-            printf("#");
-        }
-        printf("\n");
+    // Calculate the number of nickels to give the customer
+    int nickels = calculate_nickels(cents);
+    cents = cents - nickels * 5;
 
-    }
+    // Calculate the number of pennies to give the customer
+    int pennies = calculate_pennies(cents);
+    cents = cents - pennies * 1;
 
+    // Sum coins
+    int coins = quarters + dimes + nickels + pennies;
+
+    // Print total number of coins to give the customer
+    printf("%i\n", coins);
+}
+
+int get_cents(void)
+{
+
+   int cents;
+
+   do
+   {
+    cents = get_int("Change Owed: ");
+   }
+   while (cents < 0);
+
+   return cents;
+
+
+}
+int calculate_quarters(int cents)
+{
+    int quarters = cents / 25;
+    return quarters;
+}
+
+int calculate_dimes(int cents)
+{
+    int dimes = cents / 10;
+    return dimes;
+}
+
+int calculate_nickels(int cents)
+{
+    int nickels = cents / 5;
+    return nickels;
+}
+
+int calculate_pennies(int cents)
+{
+    int pennies = cents / 1;
+    return pennies;
 }
