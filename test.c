@@ -26,7 +26,7 @@ int main(void)
         {
             printf("#");
         }
-
+        printf(" ");
          for (int space2 = height - 1; space2 > i; space2--)
         {
             printf(" ");
