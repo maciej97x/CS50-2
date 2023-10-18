@@ -12,7 +12,10 @@ int main(void)
 
     for (int i = 0; i < height; i++)
     {
-        
+        for (int space = height - 1; space > i; space--)
+        {
+            printf(" ");
+        }
         for (int hash = 0; hash <= i; hash++)
         {
             printf("#");
