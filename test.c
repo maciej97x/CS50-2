@@ -14,7 +14,7 @@ int main(void)
     {
         for (int space = height - 1; space > i; space--)
         {
-            printf("a");
+            printf(" ");
         }
         for (int hash = 0; hash <= i; hash++)
         {
@@ -26,6 +26,15 @@ int main(void)
         {
             printf("#");
         }
+        printf(" ");
+        for (int space2 = height - 1; space2 > i; space2--)
+        {
+            printf(" ");
+        }
+        for (int hash3 = 0; hash3 <= i; hash3++)
+        {
+            printf("#");
+
         printf("\n");
 
     }
