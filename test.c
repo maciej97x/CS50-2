@@ -34,6 +34,7 @@ int main(void)
         for (int hash3 = 0; hash3 <= i; hash3++)
         {
             printf("#");
+        }
 
         printf("\n");
 
