@@ -10,13 +10,13 @@ int main(void)
     }
     while (height > 1 || height < 9);
 
-    for (height = 0; i < height; i++)
+    for (int i = 0; i < height; i++)
     {
-        for (space = height - 1; space > i; space--)
+        for (int space = height - 1; space > i; space--)
         {
             printf(" ");
         }
-        for (hash = 0; hash <= i; hash++)
+        for (int hash = 0; hash <= i; hash++)
         {
             printf("#");
         }
