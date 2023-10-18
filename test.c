@@ -16,5 +16,10 @@ int main(void)
         {
             printf(" ");
         }
+        for (hash = 0; hash <= i; hash++)
+        {
+            printf("#");
+        }
+        printf("\n");
     }
 }
