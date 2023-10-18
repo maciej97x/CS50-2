@@ -11,7 +11,7 @@ int main(void)
   while (start < 9);
 
   int end;
-  do
+  do 
   {
     end = get_int("End size: ");
   }
