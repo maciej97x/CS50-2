@@ -13,7 +13,6 @@ int main(void)
     for (int i = 0; i < height; i++)
     {
         for (int spaces = height - 1; spaces > i; spaces--)
-        else 
         {
             printf(" ");
         }
@@ -21,6 +20,7 @@ int main(void)
         {
             printf("#");
         }
+        printf(" ");
         printf("\n");
     }
 
