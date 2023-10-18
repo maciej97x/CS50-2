@@ -8,7 +8,7 @@ int main(void)
     {
         height = get_int("Numbers of rows ");
     }
-    while (height > 1 || height < 9);
+    while (height < 1 || height > 9);
 
     for (int i = 0; i < height; i++)
     {
