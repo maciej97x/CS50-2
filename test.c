@@ -12,7 +12,7 @@ int main(void)
 
     for (int i = 0; i < height; i++)
     {
-        for (int space = height - 2; space > i; space--)
+        for (int space = height - 3; space > i; space--)
         {
             printf("a");
         }
