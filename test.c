@@ -23,9 +23,8 @@ int main(void)
         printf(" ");
         for (int hash2 = 0; hash2 <= i; hash2++)
         {
-            printf("#");
+            printf("#\n");
         }
-        printf("\n");
     }
 
 }
