@@ -20,6 +20,11 @@ int main(void)
         {
             printf("#");
         }
+        printf(" ");
+         for (int hash2 = 0; hash2 <= i; hash2++)
+        {
+            printf("#");
+        }
         printf("\n");
     }
 }
