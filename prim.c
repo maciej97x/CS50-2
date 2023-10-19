@@ -37,7 +37,7 @@ bool prime(int number)
     }
 
     int j;
-    for (j = 2; j <= number - 1; j++)
+    for (j = 2; j < number; j++)
     {
         if (number %j == 0)
         {
