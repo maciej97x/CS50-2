@@ -34,19 +34,19 @@ bool valid(string password)
     {
         if(islower(password[i]))
         {
-            return true;
+            checkLower = true;
         }
         if(isupper(password[i]))
         {
-            return true;
+            checkUpper = true;
         }
         if(isxdigit(password[i]))
         {
-            return true;
+            checkDigit = true;
         }
         if(isalnum(password[i]))
         {
-            return true;
+            checkSymbol = true;
         }
     }
 
