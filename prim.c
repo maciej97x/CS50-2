@@ -8,7 +8,7 @@ int main(void)
     int min;
     do
     {
-        min = get_int("Minimum: ");
+                min = get_int("Minimum: ");
     }
     while (min < 1);
 
