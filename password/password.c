@@ -30,7 +30,7 @@ bool valid(string password)
     bool checkNumber = false;
     bool checkSymbol = false;
 
-    for (int i = 0; i < strlen(password); i++);
+    for (int i = 0; i < strlen(password); i++)
     {
         if(islower(password[i]))
         {
