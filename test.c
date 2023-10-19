@@ -40,11 +40,11 @@ bool valid(string password)
         {
             checkUpper = true;
         }
-        if(isxdigit(password[i]))
+        if(isdigit(password[i]))
         {
             checkDigit = true;
         }
-        if(isalnum(password[i]))
+        if(!isalnum(password[i]))
         {
             checkSymbol = true;
         }
