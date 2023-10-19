@@ -1,75 +1,69 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int get_cents(void);
-int calculate_quarters(int cents);
-int calculate_dimes(int cents);
-int calculate_nickels(int cents);
-int calculate_pennies(int cents);
-
 int main(void)
 {
-    // Ask how many cents the customer is owed
-    int cents = get_cents();
+    long card;
 
-    // Calculate the number of quarters to give the customer
-    int quarters = calculate_quarters(cents);
-    cents = cents - quarters * 25;
+    int sum_of_evens = 0, sum_of_odd = 0, digits = 0, number = 0, number2 = 0;
 
-    // Calculate the number of dimes to give the customer
-    int dimes = calculate_dimes(cents);
-    cents = cents - dimes * 10;
+    do
+    {
+        card = get_long("Number: ");
+    }
+    while (card < 0);
 
-    // Calculate the number of nickels to give the customer
-    int nickels = calculate_nickels(cents);
-    cents = cents - nickels * 5;
+    while (card > 0)
+    {
 
-    // Calculate the number of pennies to give the customer
-    int pennies = calculate_pennies(cents);
-    cents = cents - pennies * 1;
+        digits ++;
 
-    // Sum coins
-    int coins = quarters + dimes + nickels + pennies;
+        number2 = number;
 
-    // Print total number of coins to give the customer
-    printf("%i\n", coins);
-}
-
-int get_cents(void)
-{
-
-   int cents;
-
-   do
-   {
-    cents = get_int("Change Owed: ");
-   }
-   while (cents < 0);
-
-   return cents;
+        number = card % 10;
 
 
-}
-int calculate_quarters(int cents)
-{
-    int quarters = cents / 25;
-    return quarters;
-}
+        if (digits % 2 == 0)
+        {
+            int multiply = number * 2;
 
-int calculate_dimes(int cents)
-{
-    int dimes = cents / 10;
-    return dimes;
-}
+            sum_of_evens += (multiply / 10) + (multiply % 10);
 
-int calculate_nickels(int cents)
-{
-    int nickels = cents / 5;
-    return nickels;
-}
+        }
 
-int calculate_pennies(int cents)
-{
-    int pennies = cents / 1;
-    return pennies;
+        if (digits % 2 != 0)
+        {
+            sum_of_odd += number;
+        }
+
+        card /= 10;
+
+    }
+
+    int firstn = number * 10 + number2;
+
+    if ((sum_of_evens + sum_of_odd) % 10 == 0)
+    {
+        if ((digits == 13 || digits == 16) && number == 4)
+        {
+            printf("VISA\n");
+        }
+        else if (digits == 15 && (firstn == 34 || firstn == 37))
+        {
+            printf("AMEX\n");
+        }
+        else if (digits == 16 && firstn >= 51 && firstn <= 55)
+        {
+            printf("MASTERCARD\n");
+        }
+        else
+        {
+            printf("INVALID\n");
+        }
+    }
+    else
+    {
+        printf("INVALID\n");
+    }
+
 }
