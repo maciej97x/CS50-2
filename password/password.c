@@ -31,7 +31,12 @@ bool valid(string password)
     bool chceck Number = false;
 
     for (int i = 0; i < strlen(password); i++);
-    {}
+    {
+        if(islower(password[i]))
+        {
+            checkLower = true;
+        }
+    }
 
 
 
