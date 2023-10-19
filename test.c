@@ -27,7 +27,7 @@ bool valid(string password)
 {
     bool checkLower = false;
     bool checkUpper = false;
-    bool checkDigit = false;
+    bool checkNumber = false;
     bool checkSymbol = false;
 
     for (int i = 0; i < strlen(password); i++)
@@ -42,7 +42,7 @@ bool valid(string password)
         }
         if(isdigit(password[i]))
         {
-            checkDigit = true;
+            checkNumber = true;
         }
         if(!isalnum(password[i]))
         {
@@ -50,7 +50,7 @@ bool valid(string password)
         }
     }
 
-    if (checkLower == true && checkUpper == true && checkDigit == true && checkSymbol == true)
+    if (checkLower == true && checkUpper == true && checkNumber == true && checkSymbol == true)
     {
     return true;
     }
