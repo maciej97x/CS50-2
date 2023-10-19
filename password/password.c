@@ -24,7 +24,14 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
-    int isupper;
-    if (password != isupper )
+    bool checkLower = false;
+    bool checkUpper = false;
+    bool checkNumber = false;
+    bool chceck Number = false;
+
+    for (int i =)
+
+
+
     return false;
 }
