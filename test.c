@@ -1,31 +1,60 @@
-#include <cs50.h>
-#include <ctype.h>
-#include <stdio.h>
+// Check that a password has at least one lowercase letter, uppercase letter, number and symbol
+// Practice iterating through a string
+// Practice using the ctype library
 
-float calc_hours(int hours[], int weeks, char output);
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+bool valid(string password);
 
 int main(void)
 {
-    int weeks = get_int("Number of weeks taking CS50: ");
-    int hours[weeks];
-
-    for (int i = 0; i < weeks; i++)
+    string password = get_string("Enter your password: ");
+    if (valid(password))
     {
-        hours[i] = get_int("Week %i HW Hours: ", i);
+        printf("Your password is valid!\n");
     }
-
-    char output;
-    do
+    else
     {
-        output = toupper(get_char("Enter T for total hours, A for average hours per week: "));
+        printf("Your password needs at least one uppercase letter, lowercase letter, number and symbol\n");
     }
-    while (output != 'T' && output != 'A');
-
-    printf("%.1f hours\n", calc_hours(hours, weeks, output));
 }
 
-// TODO: complete the calc_hours function
-float calc_hours(int hours[], int weeks, char output)
+// TODO: Complete the Boolean function below
+bool valid(string password)
 {
+    bool checkLower = false;
+    bool checkUpper = false;
+    bool checkDigit = false;
+    bool checkSymbol = false;
 
+    if (int i = 0; i < strlen(password[i]); i++)
+    {
+        if(islower(password[i]))
+        {
+            return true;
+        }
+        if(isupper(password[i]))
+        {
+            return true;
+        }
+        if(isxdigit(password[i]))
+        {
+            return true;
+        }
+        if(isalnum(password[i]))
+        {
+            return true;
+        }
+    }
+
+if (checkLower == true && checkUpper == true && checkDigit == true && checkSymbol == true)
+{
+    return true;
 }
+
+return false;
+}
+
