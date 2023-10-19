@@ -5,6 +5,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <ctring.h>
+#include <ctype.h>
 
 bool valid(string password);
 
