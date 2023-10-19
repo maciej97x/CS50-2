@@ -4,7 +4,7 @@
 
 #include <cs50.h>
 #include <stdio.h>
-#include <ctype.h>
+#include <ctring.h>
 
 bool valid(string password);
 
@@ -29,7 +29,8 @@ bool valid(string password)
     bool checkNumber = false;
     bool chceck Number = false;
 
-    for (int i =)
+    for (int i = 0; i < strlen(password); i++);
+    {}
 
 
 
