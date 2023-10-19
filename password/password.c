@@ -48,12 +48,11 @@ bool valid(string password)
         {
             return true;
         }
-    }
 
-if (checkLower == true && checkUpper == true && checkDigit == true && checkSymbol == true)
-{
+
+    if (checkLower == true && checkUpper == true && checkDigit == true && checkSymbol == true)
     return true;
-}
+
 
 return false;
 }
