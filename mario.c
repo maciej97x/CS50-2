@@ -8,9 +8,13 @@ int main(void)
     height = get_int("height ");
     while(height < 2);
 
-    for(int i = 0; i < height; i++);
+    for(int i = 0; i < height; i++)
     {
-        for()
-    }
+        for(int hash = 0; hash <= i; hash++)
+        {
+        printf("#");
+        }
+        printf("\n");
 
+}
 }
