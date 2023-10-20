@@ -14,11 +14,10 @@ end = get_int("End ");
 while (end > 8);
 
 int years = 0;
-for(int i = 0; i == end;i++)
+while (start < end)
 {
-  (start  start + start / 3 - start / 4);
-  {
-    printf("Years %i ", years);
-  }
+  start = start + start / 4 - start / 3;
+  years++;
 }
+printf("Years; %i", years);
 }
