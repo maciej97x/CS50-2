@@ -8,9 +8,9 @@ int main(void)
     height = get_int("height ");
     while(height < 2);
 
-    for(i = 0; i < height; i++);
+    for(int i = 0; i < height; i++);
     {
-        for(HASH )
+        for()
     }
 
 }
