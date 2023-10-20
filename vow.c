@@ -6,7 +6,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
-string replace(string word);
+string replace(string input);
 
 int main(int argc, string argv[])
 {
@@ -15,17 +15,21 @@ int main(int argc, string argv[])
         printf("Usage; ./no-vowels word\n");
         return 1;
     }
-    printf("%s\n", replace(argv[1]));
+    string word = argv[1];
+    string result = replace(word);
 
 }
 
-string replace(string word)
+string replace(string input)
 {
-    int lenght = 0;
-    lenght = strlen(word);
-    for (int i = 0; 1 < lenght; i++)
+    string output = input;
+
+
+    for (int i = 0; 1 < strlen(input); i++)
     {
-        switch (word[i])
+        char c = tolowe(input[i]);
+        printf("%c\n", input[i]);
+        
         {
             case 'a':
             word[i] = '6';
